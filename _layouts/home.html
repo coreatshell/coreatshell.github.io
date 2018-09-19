@@ -2,17 +2,47 @@
 layout: default
 ---
 
-<!-- Hero Section -->
 
-<section class="hero" id="hero">
-    <h2 class="hero_header">HERO <span class="light">LIGHT</span></h2>
-    <p class="tagline">Light is a simple one page website</p>
-</section>
 <!-- About Section -->
 
-<section class="about" id="about">
+<section class="about" id="hero">
+    <article>
     <h2 class="hidden">About</h2>
-    <p class="picture_column"><img src="{{ page.profile }}" class="profile"> </p>
-    <p class="about_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+    <p class="image fit"><img src="{{ page.profile }}" class="profile"> </p>
+    </article>
+    <article>
+    <p >{{ site.description }} </p>
+    </article>
+</section>
+
+
+<!-- Posts -->
+<section class="posts">
+
+    {% for post in site.posts limit:6 %}
+    {% assign mod3 = forloop.index | modulo: 3 %}
+    <article>
+        <header>
+            <span class="date">{{ post.date | date_to_string }}</span>
+            <h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+        </header>
+        <a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
+        <p>{{ post.excerpt }}</p>
+        <ul class="actions">
+            <li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
+        </ul>
+    </article>
+    {% endfor %}
+
+
+
+
 
 </section>
+
+<!-- Footer -->
+<footer>
+    <ul class="actions">
+        <li><a href="/blog/" class="button">Our Blog</a></li>
+    </ul>
+</footer>

@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+
+<!-- Posts -->
+
+
+
+    {% for page in site.pages limit:6 %}
+    {% assign mod3 = forloop.index | modulo: 3 %}
+    {% if page.layout == "item" %}
+<section class="about" id="hero">
+    <article>
+        <h2 class="hidden">{{ page.title }}</h2>
+        <h3 class="hidden">{{ page.role }}</h3>
+        <p class="image fit"><img src="{{ page.profile }}" class="profile"> </p>
+    </article>
+    <article>
+        <p >{{ page.description }} </p>
+
+    </article>
+</section>
+    {{ page.content }}
+    {% endif %}
+    {% endfor %}
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer>
+    <ul class="actions">
+        <li><a href="/blog/" class="button">Our Blog</a></li>
+    </ul>
+</footer>

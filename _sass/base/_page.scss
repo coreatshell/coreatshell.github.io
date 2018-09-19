@@ -50,8 +50,12 @@
 /* Hero Section */
 .hero {
 	background-color: #B3B3B3;
-	padding-top: 150px;
-	padding-bottom: 150px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	max-width: _size(wrapper);
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 .light {
 	font-weight: bold;
