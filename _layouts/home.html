@@ -2,17 +2,67 @@
 layout: default
 ---
 
-<!-- Hero Section -->
 
-<section class="hero" id="hero">
-    <h2 class="hero_header">HERO <span class="light">LIGHT</span></h2>
-    <p class="tagline">Light is a simple one page website</p>
-</section>
 <!-- About Section -->
 
-<section class="about" id="about">
-    <h2 class="hidden">About</h2>
-    <p class="picture_column"><img src="{{ page.profile }}" class="profile"> </p>
-    <p class="about_column">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+<article class="post featured">
+    <header class="major">
+        <h2><a href="#">Welcome</a></h2>
+        <p>{{ site.title}}</p>
+    </header>
+    <article>
+        <p >{{ site.description }} </p>
+    </article>
+    <a href="#" class="image main"><img src="{{ "assets/images/welcome.jpg" | absolute_url }}" alt="" /></a>
+
+    <header><h1> Latest News </h1></header>
+</article>
+
+<!--
+<section class="about" id="hero">
+    <article>
+    <h2 class="hidden">{{page.title}}</h2>
+    <p class="image fit"><img src="{{ page.profile }}" class="profile"> </p>
+    </article>
+    <article>
+    <p >{{ site.description }} </p>
+    </article>
 
 </section>
+-->
+
+
+
+
+<!-- Posts -->
+<section class="posts">
+
+    {% for post in site.posts limit:3 %}
+    {% assign mod3 = forloop.index | modulo: 3 %}
+    {% if post.featured  %}
+    <article>
+        <header>
+            <span class="date">{{ post.date | date_to_string }}</span>
+            <h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+        </header>
+        <a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
+        <p>{{ post.excerpt }}</p>
+        <ul class="actions">
+            <li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
+        </ul>
+    </article>
+    {% endif %}
+    {% endfor %}
+
+
+
+
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <ul class="actions">
+        <li><a href="/latest/" class="button">Our Latest Research</a></li>
+    </ul>
+</footer>

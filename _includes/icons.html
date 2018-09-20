@@ -1,0 +1,6 @@
+<ul class="icons">
+    {%- if site.twitter_username -%}<li><a href="https://twitter.com/{{ site.twitter_username| cgi_escape | escape }}" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li>{%endif%}
+    {%- if site.facebook_username -%}<li><a href="https://www.facebook.com/{{ site.facebook_username| cgi_escape | escape }}" class="icon fa-facebook" rel="nofollow"><span class="label">Facebook</span></a></li>{%endif%}
+    {%- if site.instagram_username -%}<li><a href="https://instagram.com/{{ site.instagram_username| cgi_escape | escape }}" class="icon fa-instagram" rel="nofollow"><span class="label">Instagram</span></a></li>{%endif%}
+    {%- if site.github_username -%} <li><a href="https://github.com/{{ site.github_username| cgi_escape | escape }}" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>{%endif%}
+</ul>

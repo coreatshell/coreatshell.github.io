@@ -1,0 +1,17 @@
+
+
+<ul class="links">
+{% assign sorted_pages = site.pages | sort:'navorder' %}
+{% for node in sorted_pages %}
+{% if node.type == "nav" %}
+
+
+    <li class="{% if page.url == node.url %} active {% endif %}"><a href="{{ node.url }}">{{ node.navtitle }}</a></li>
+
+
+
+
+{% endif %}
+{% endfor %}
+
+</ul>
