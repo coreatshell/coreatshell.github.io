@@ -5,22 +5,41 @@ layout: default
 
 <!-- About Section -->
 
+<article class="post featured">
+    <header class="major">
+        <h2><a href="#">Welcome</a></h2>
+        <p>{{ site.title}}</p>
+    </header>
+    <article>
+        <p >{{ site.description }} </p>
+    </article>
+    <a href="#" class="image main"><img src="{{ "assets/images/welcome.jpg" | absolute_url }}" alt="" /></a>
+
+    <header><h1> Latest News </h1></header>
+</article>
+
+<!--
 <section class="about" id="hero">
     <article>
-    <h2 class="hidden">About</h2>
+    <h2 class="hidden">{{page.title}}</h2>
     <p class="image fit"><img src="{{ page.profile }}" class="profile"> </p>
     </article>
     <article>
     <p >{{ site.description }} </p>
     </article>
+
 </section>
+-->
+
+
 
 
 <!-- Posts -->
 <section class="posts">
 
-    {% for post in site.posts limit:6 %}
+    {% for post in site.posts limit:3 %}
     {% assign mod3 = forloop.index | modulo: 3 %}
+    {% if post.featured  %}
     <article>
         <header>
             <span class="date">{{ post.date | date_to_string }}</span>
@@ -32,6 +51,7 @@ layout: default
             <li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
         </ul>
     </article>
+    {% endif %}
     {% endfor %}
 
 
@@ -43,6 +63,6 @@ layout: default
 <!-- Footer -->
 <footer>
     <ul class="actions">
-        <li><a href="/blog/" class="button">Our Blog</a></li>
+        <li><a href="/latest/" class="button">Our Latest Research</a></li>
     </ul>
 </footer>

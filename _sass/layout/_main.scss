@@ -75,7 +75,7 @@
 
 		> .posts {
 			@include flexgrid((
-				columns:			3,
+				columns:			2,
 				gutters:			(_size(padding) * 4),
 				horizontal-align:	center,
 				vertical-align:		flex-start,
@@ -169,3 +169,15 @@
           width: 100%;
           padding: 0;
         }
+
+.member {
+	@include flexgrid((
+					columns: 1,
+					gutters: (_size(padding) * 4),
+					horizontal-align: center,
+					vertical-align: flex-start,
+					flush: false
+	));
+	width: 100%;
+	padding: 0;
+}

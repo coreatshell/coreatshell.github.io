@@ -1,39 +1,106 @@
 ---
-layout: default
+layout: page
 ---
+
 
 
 <!-- Posts -->
 
 
 
-    {% for page in site.pages limit:6 %}
-    {% assign mod3 = forloop.index | modulo: 3 %}
-    {% if page.layout == "item" %}
-<section class="about" id="hero">
+{% assign sorted_pages = site.pages | sort:"priority" | reverse %}
+{% assign SupervisorFlag = page.Supervisors %}
+{% assign PhdStudentFlag = page.PhdStudents %}
+{% assign ResearchAssistantsFlag = page.ResearchAssistants %}
+{% assign ResearchAssociatesFlag = page.ResearchAssociates %}
+
+
+<section >
     <article>
-        <h2 class="hidden">{{ page.title }}</h2>
-        <h3 class="hidden">{{ page.role }}</h3>
-        <p class="image fit"><img src="{{ page.profile }}" class="profile"> </p>
-    </article>
-    <article>
-        <p >{{ page.description }} </p>
+
+
+
+            {% for node in sorted_pages %}
+                {% if node.layout == "member" %}
+
+                        {% if SupervisorFlag > 0 and node.role == "Supervisor"%}
+                            {% assign SupervisorFlag = SupervisorFlag | minus: 1 %}
+
+                            <header>
+
+                                <h3>Supervisors</h3>
+                            </header>
+
+                        {% endif %}
+
+                        {% if PhdStudentFlag > 0 and node.role == "PhD Student"%}
+                            {% assign PhdStudentFlag = PhdStudentFlag | minus: 1 %}
+
+                            <header>
+                            <h3>PhD Students</h3>
+                            </header>
+
+                        {% endif %}
+
+
+                        {% if ResearchAssociatesFlag > 0 and node.role == "Research Associate"%}
+                        {% assign ResearchAssociatesFlag = ResearchAssociatesFlag | minus: 1 %}
+
+                            <header>
+                            <h3>Research Associates</h3>
+                            </header>
+
+                        {% endif %}
+
+
+                        {% if ResearchAssistantsFlag > 0 and node.role == "Research Assistant"%}
+                        {% assign ResearchAssistantsFlag = ResearchAssistantsFlag | minus: 1 %}
+
+                            <header>
+                            <h3>Research Assistants</h3>
+                            </header>
+
+                        {% endif %}
+
+
+
+<p><a href="mailto:{{node.email}}"> <img src="/assets/icon/icon-email.png" width="20px">  </a><a href="#{{ node.title }}">{{ node.title }}</a> </p>
+
+{% endif %}
+{% endfor %}
 
     </article>
 </section>
-    {{ page.content }}
-    {% endif %}
-    {% endfor %}
+
+
+
+{% for node in sorted_pages %}
+{% if node.layout == "member" %}
+<section class="member" id="hero">
+    <article>
+
+
+        <div class="box">
+        <p><p class="image left"><img src="{{ node.profile }}" class="profile"></p> <br>
+            <header>
+                <h2 class="hidden"><a name="{{ node.title }}">{{ node.title }}</a></h2>
+                <h3 class="hidden">{{ node.role }}</h3>
+
+            </header>
+            <a href="mailto:{{node.email}}"> <img class="icons" src="/assets/icon/icon-email.png" width="25px">  {{node.email}}</a> </p>
+        <p >{{ node.description }} </p>
+        </div>
+
+    </article>
+
+</section>
+<p >{{ node.content }} </p>
+
+
+{% endif %}
+{% endfor %}
 
 
 
 
 
-
-
-<!-- Footer -->
-<footer>
-    <ul class="actions">
-        <li><a href="/blog/" class="button">Our Blog</a></li>
-    </ul>
-</footer>

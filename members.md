@@ -1,6 +1,13 @@
 ---
-layout: item
-title: About our Research group
+layout: items
+type: nav
+navtitle: Lab Members
+navorder: 3
+title: Lab Members
+Supervisors: 1
+PhdStudents: 1
+ResearchAssistants: 1
+ResearchAssociates: 1
 description: A list of our research interests and general information
 sitemap:
     priority: 0.7
@@ -8,4 +15,3 @@ sitemap:
     changefreq: weekly
 ---
 
-test1

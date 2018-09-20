@@ -31,6 +31,8 @@
 	$palette: (
 		wrapper-bg:			#212931,
 
+
+		fg-accent:			#2D9AB7,
 		bg:					#ffffff,
 		fg:					#212931,
 		fg-bold:			#212931,
@@ -43,7 +45,7 @@
 			bg:				#f5f5f5,
 			fg:				#717981,
 			fg-bold:		#717981,
-			fg-light:		mix(#717981, #f5f5f5, 50%),
+			fg-light:		mix(#717070, #f5f5f5, 50%),
 			border:			mix(#dcdcdc, #f5f5f5, 75%),
 			border-bg:		rgba(#dcdcdc, 0.5),
 			accent:			#18bfef,

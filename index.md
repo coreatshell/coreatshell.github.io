@@ -8,7 +8,11 @@
   
 
 layout: home
-profile: assets/images/BH_profile.png
+title: index
+type: nav
+navorder: 1
+navtitle: Home
+profile: assets/images/profiles/huangbolong_profile.png
 ---
 
 
