@@ -76,11 +76,12 @@ layout: page
 
 {% for node in sorted_pages %}
 {% if node.layout == "member" %}
-<section class="member" id="hero">
+<div class="box">
+<section class="post featured" id="hero">
     <article>
 
 
-        <div class="box">
+
         <p><p class="image left"><img src="{{ node.profile }}" class="profile"></p> <br>
             <header>
                 <h2 class="hidden"><a name="{{ node.title }}">{{ node.title }}</a></h2>
@@ -89,14 +90,14 @@ layout: page
             </header>
             <a href="mailto:{{node.email}}"> <img class="icons" src="/assets/icon/icon-email.png" width="25px">  {{node.email}}</a> </p>
         <p >{{ node.description }} </p>
-        </div>
+
 
     </article>
 
 </section>
 <p >{{ node.content }} </p>
 
-
+</div>
 {% endif %}
 {% endfor %}
 
