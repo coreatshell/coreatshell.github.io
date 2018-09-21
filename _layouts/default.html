@@ -1,25 +1,20 @@
 <!DOCTYPE HTML>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html>
 
-
+<head>
 {%- include head.html -%}
-<body >
+
+</head>
+
+
+<body class="is-loading">
 
 <!-- Wrapper -->
-<div id="wrapper">
+<div id="wrapper" class="fade-in">
 
-    <!-- Hero Section
-<header class="hero">
 
-        <h2 class="hero_header">HERO <span class="light">LIGHT</span></h2>
-        <p class="tagline">Light is a simple one page website</p>
-  </header>-->
     {% include header.html %}
-    <!-- Header
-    <header id="header">
-        <a href="/" class="logo">{{site.title}}</a>
-    </header>
-    -->
+
     <!-- Nav -->
     <nav id="nav">
 
@@ -52,16 +47,8 @@
 
 </div>
 
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=default"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments)};
-    gtag('js', new Date());
-
-    gtag('config', 'default');
-</script>
+{% include scripts-main.html %}
+{% include tracking.html %}
 
 
 </body>

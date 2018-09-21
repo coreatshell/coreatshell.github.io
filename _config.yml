@@ -40,15 +40,18 @@ markdown: kramdown
 
 sass:
   sass_dir: _sass
+#  style:    compressed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+
+# Exclude list
+exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile, old]
+
+plugins:
+- jekyll-mentions
+- jekyll-sitemap
+- jekyll-feed
+- jekyll-gist
+- jekyll-paginate
