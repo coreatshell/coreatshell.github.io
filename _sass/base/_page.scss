@@ -53,6 +53,7 @@
 	padding-top: 50px;
 	padding-bottom: 50px;
 	max-width: _size(wrapper);
+	z-index: -1;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -72,10 +73,10 @@
 
 .banner {
 	background-color: _palette(fg-accent);
-	background-image: url(../assets/images/parallax2.png);
+	background-image: url(../images/parallax2.png);
 	height: 400px;
 	background-attachment: fixed;
-	background-size: cover;
+	background-size: auto,								auto,														auto 175%;
 	background-repeat: no-repeat;
 }
 .parallax {
