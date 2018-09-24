@@ -77,6 +77,8 @@
 	height: 400px;
 	background-attachment: fixed;
 	background-size: cover;
+	@media (max-width: 980px) {
+		background-attachment: scroll;}
 	background-repeat: no-repeat;
 }
 .parallax {
