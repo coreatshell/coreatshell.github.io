@@ -20,6 +20,6 @@ sitemap:
     priority: 4
     lastmod: 2018-09-18
     changefreq: weekly
-profile: assets/images/profiles/profile_placeholder.png
+profile: assets/images/profiles/sunmingzi_profile.png
 ---
 

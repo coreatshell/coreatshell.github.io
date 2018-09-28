@@ -22,7 +22,7 @@ sitemap:
     priority: 5
     lastmod: 2018-09-18
     changefreq: weekly
-profile: assets/images/profiles/profile_placeholder.png
+profile: assets/images/profiles/huangbolong_profile.png
 email: bolong.huang@polyu.edu.hk
 ---
 
