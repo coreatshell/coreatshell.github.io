@@ -22,8 +22,7 @@ contactemail: alan.dougherty@connect.polyu.hk
 lab_title: >-
   Research Group
 description: >- # this means to ignore newlines until "baseurl:"
-  This is the website for Bolong Huang's research group at the Hong Kong Polytechnic University. our research interests include
-  these things such as bla bla bla
+  This is the website for Bolong Huang's research group at the Hong Kong Polytechnic University.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: bolonghuang
