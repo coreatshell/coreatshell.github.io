@@ -26,6 +26,7 @@ layout: default
 
     {% assign sorted_pages = site.pages | sort: "date" | reverse %}
     {% assign counter = 1 %}
+    {% assign banner_flag = 0 %}
 
     {% for post in site.posts limit:6 %}
         {% assign mod2 = counter | modulo: 2 %}
@@ -34,7 +35,7 @@ layout: default
                 <article>
                     <header>
                         <span class="date">{{ post.date | date_to_string }}</span>
-                        <h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+                        <h2><a class="image fit" href="{{ post.url | absolute_url }}"><img src="{{ post.title | absolute_url }}" alt="" /></a></h2>
                     </header>
                     <a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
                     <p>{{ post.excerpt }}</p>
@@ -43,10 +44,20 @@ layout: default
                     </ul>
                 </article>
                 {% if mod2 == 0 %}
+                    {% if banner_flag ==1 %}
                         </section>
-                            <section class="banner">
-                               </section>
+                        <section class="banner">
+                            <h2 class="parallax">{{page.qotd}}</h2>
+                            <div class="parallax_description">{{ page.qotdauthor }}</div>
+                        </section>
                         <section class="posts">
+                        {% assign banner_flag = 0 %}
+                        {% else %}
+                            </section>
+                                <section class="banner">
+                                   </section>
+                            <section class="posts">
+                                {% endif %}
                 {%endif%}
         {% endif %}
     {% endfor %}
