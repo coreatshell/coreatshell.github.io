@@ -1,6 +1,6 @@
 ---
 layout: page
-type: nav
+type: 1nav
 navtitle: About
 navorder: 2
 title: about

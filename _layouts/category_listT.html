@@ -1,0 +1,128 @@
+---
+layout: default
+---
+
+<article class="post">
+
+
+
+
+        {{content}}
+
+
+</article>
+
+
+
+<section class="{{'posts-' | append: page.title }}" >
+
+
+
+{% assign test = page.title | append: '.html' %}
+{% include {{ page.title | append: '.html' }} %}
+    </section>
+
+
+
+
+
+
+<!--
+
+<ul>
+    {% for categoryL in site.categories %}
+    {% if categoryL.first == page.category %}
+    <li><a name="{{ category | first }}">{{ categoryL | first }}</a>
+        <ul>
+            <li>{{ categoryL.last[0].categories[1] }}</li>
+            {% for post in categoryL.last %}
+            <li><a href="{{ post.url }}">{{ post.categories[1] }}</a></li>
+            {{post.categories | capitalize | join: ', '}}
+            {% endfor %}
+        </ul>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+
+
+
+<section class="posts">
+
+    <article>
+        <header>
+            <span class="date">{{ post.date | date_to_string }}</span>
+            <h2><a class="image fit" href="{{ post.url | absolute_url }}">{{ post.title}}</a></h2>
+        </header>
+        <a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
+        <p>{{ post.excerpt }}</p>
+        <ul class="actions">
+            <li><a href="{{ post.url | absolute_url }}" class="button">Read More</a></li>
+        </ul>
+    </article>
+
+</section>
+-->
+
+
+
+
+
+
+{% comment %}
+<!-- Posts -->
+<section class="posts">
+
+    {% assign sorted_pages = site.posts | sort: "date" | reverse %}
+    {% assign counter = 1 %}
+    {% assign banner_flag = 0 %}
+    {% assign category_flag =0 %}
+
+    {% for post in site.posts limit:6 %}
+        {% assign mod2 = counter | modulo: 2 %}
+
+            <!-- see if page contains the target category -->
+        {% for category in page.categories %}
+                {% for post_category in post.categories %}
+                        {% if post_category == category %}
+                            {% assign category_flag = 1 %}
+                        {% endif %}
+                {% endfor %}
+        {% endfor %}
+
+        {% if post.categories[0] == page.categories[0] %}
+                {%assign counter = counter | plus: 1 %}
+                <article>
+                    <header>
+                        <span class="date">{{ post.date | date_to_string }}</span>
+                        <h2><a class="image fit" href="{{ post.url | absolute_url }}">{{ post.title}}</a></h2>
+                    </header>
+                    <a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
+                    <p>{{ post.excerpt }}</p>
+                    <ul class="actions">
+                        <li><a href="{{ post.url | absolute_url }}" class="button">Read More</a></li>
+                    </ul>
+                </article>
+                {% if mod2 == 0 %}
+                    {% if banner_flag ==1 %}
+                        </section>
+                        <section class="banner">
+                            <h2 class="parallax">{{page.qotd}}</h2>
+                            <div class="parallax_description">{{ page.qotdauthor }}</div>
+                        </section>
+                        <section class="posts">
+                        {% assign banner_flag = 0 %}
+                        {% else %}
+                            </section>
+                                <section class="banner">
+                                   </section>
+                            <section class="posts">
+                                {% endif %}
+                {%endif%}
+        {% endif %}
+    {% endfor %}
+
+{% endcomment %}
+
+
+

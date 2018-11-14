@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Bolong Huang's Research Group
+title: Dr. Bolong Huang's research group at The Hong Kong Polytechnic University.
 author: Bolong Huang
 author_firstname: Bolong
 author_lastname: Huang
@@ -22,7 +22,7 @@ contactemail: alan.dougherty@connect.polyu.hk
 lab_title: >-
   Research Group
 description: >- # this means to ignore newlines until "baseurl:"
-  This is the website for Bolong Huang's research group at the Hong Kong Polytechnic University.
+  Dr. Bolong Huang's research group at The Hong Kong Polytechnic University.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: bolonghuang
@@ -36,6 +36,23 @@ phone: 555-555-555
 markdown: kramdown
 #plugins:
  # - jekyll-feed
+
+## Collections
+collections:
+  patterns:
+    output: false
+  patterns-categories:
+    output: true
+    permalink: patterns/:path/
+  photos:
+    output: true
+    permalink: photography/:path/
+  staff_members:
+    people: true
+    output: true
+  photography:
+    output: true
+    permalink: photography/:path/
 
 sass:
   sass_dir: _sass

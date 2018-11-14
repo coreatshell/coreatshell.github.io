@@ -1,11 +1,18 @@
 ---
 layout: member
 title: Dr Bolong Huang
+first_name: Bolong
+middle_name: 
+surname: Huang
+salutation: Dr
 role: Supervisor
 priority: 5
-description: >-
-            Dr. Bolong Huang received Ph.D. in 2012 
-            from University of Cambridge, and he obtained 
+description: Profile Page for Dr Bolong Huang
+email: bolong.huang@polyu.edu.hk
+profile: assets/images/profiles/huangbolong_profile.png
+---
+
+ Dr. Bolong Huang received Ph.D. in 2012 from University of Cambridge, and he obtained 
             B.Sc. in condensed matter physics from Department 
             of Physics, Peking University 2007. Following a 
             systematic training period as research assistant 
@@ -18,16 +25,17 @@ description: >-
             DFT calculation development based on abinitio electronic 
             self-energy corrections, and semicore orbital corrections 
             as an implement in time-dependent DFT theory.
-sitemap:
-    priority: 5
-    lastmod: 2018-09-18
-    changefreq: weekly
-profile: assets/images/profiles/huangbolong_profile.png
-email: bolong.huang@polyu.edu.hk
----
+
 
 ## Research Interests
 
-1. Theoretical calculations with exact electronic self-energy corrections on local orbital electrons in rare-earth materials.
-2. Electronic structure and regulations of solid state functional materials.
-3. Inverse-designing and searching for new generation renewable energy materials for property modulations and rare-earth modification.
+
+
+<div style="text-align: left"> <ol><li> Theoretical calculations with exact electronic self-energy corrections on local orbital electrons in rare-earth materials.
+</li>
+
+<li> Electronic structure and regulations of solid state functional materials.</li>
+
+
+
+<li>  Inverse-designing and searching for new generation renewable energy materials for property modulations and rare-earth modification.

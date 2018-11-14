@@ -1,10 +1,18 @@
 ---
 layout: member
 title: Ms Mingzi Sun
+first_name: Mingzi
+middle_name: 
+surname: Sun
+salutation: Ms
 role: PhD Student
 priority: 4
-description: >-
-            Ms. Mingzi Sun was born in Henan, China 1990. 
+description: Profile Page for Ms. Mingzi Sun
+email: mingzi.sun@connect.polyu.hk
+profile: assets/images/profiles/sunmingzi_profile.png
+---
+
+Ms. Mingzi Sun was born in Henan, China 1990. 
             She studied chemistry at Sun-Yat Sen University 
             (B.S. 2012) and received her master degree in
              material science from University of Rochester 
@@ -16,10 +24,3 @@ description: >-
               interest is on the investigation of novel
                energy conversions of nanomaterials through
                 DFT calculation methods.
-sitemap:
-    priority: 4
-    lastmod: 2018-09-18
-    changefreq: weekly
-profile: assets/images/profiles/sunmingzi_profile.png
----
-

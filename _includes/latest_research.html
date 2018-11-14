@@ -1,37 +1,28 @@
----
-layout: default
----
 
-<article class="post">
 
-    <header class="post-header">
-        <h1 class="post-title">{{page.title}}</h1>
-    </header>
-
-    <div class="post-content">
-
-{{ content }}
-
-    </div>
-</article>
-
-<section class="banner">
-    <h2 class="parallax">{{page.qotd}}</h2>
-    <div class="parallax_description">{{ page.qotdauthor }}</div>
-</section>
 
 
 <!-- Posts -->
-<section class="posts">
+
 
     {% assign sorted_pages = site.pages | sort: "date" | reverse %}
     {% assign counter = 1 %}
-    {% assign banner_flag = 0 %}
+    {% assign banner_flag = 1 %}
 
     {% for post in site.posts limit:6 %}
         {% assign mod2 = counter | modulo: 2 %}
         {% if post.category == "research" %}
                 {%assign counter = counter | plus: 1 %}
+{% if banner_flag ==1 %}
+</section>
+<section class="banner">
+    <h2 class="parallax">{{page.qotd}}</h2>
+    <div class="parallax_description">{{ page.qotdauthor }}</div>
+</section>
+<section class="posts">
+    {% assign banner_flag = 0 %}
+    {% else %}
+    {%endif%}
                 <article>
                     <header>
                         <span class="date">{{ post.date | date_to_string }}</span>
@@ -44,21 +35,13 @@ layout: default
                     </ul>
                 </article>
                 {% if mod2 == 0 %}
-                    {% if banner_flag ==1 %}
-                        </section>
-                        <section class="banner">
-                            <h2 class="parallax">{{page.qotd}}</h2>
-                            <div class="parallax_description">{{ page.qotdauthor }}</div>
-                        </section>
-                        <section class="posts">
-                        {% assign banner_flag = 0 %}
-                        {% else %}
+
                             </section>
                                 <section class="banner">
                                    </section>
                             <section class="posts">
                                 {% endif %}
-                {%endif%}
+
         {% endif %}
     {% endfor %}
 
