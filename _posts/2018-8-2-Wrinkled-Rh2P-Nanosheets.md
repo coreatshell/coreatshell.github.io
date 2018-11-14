@@ -17,8 +17,6 @@ interest to the scientific community, however it is still a grand challenge,
 because the HER kinetics of Pt in alkaline solutions are approximately
 two to three orders of magnitude lower than that in acidic solution.
 
-<!--more-->
-
 Herein, a new class of wrinkled, ultrathin Rh2P nanosheets for enhancing
 HER catalysis at all pHs is reported. They exhibit a small overpotential
 of 18.3 mV at 10 mA cm−2, low Tafel slope of 61.5 mV dec−1, and good

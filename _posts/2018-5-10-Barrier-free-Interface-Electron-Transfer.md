@@ -18,8 +18,6 @@ like nanoparticle (NP) interface catalysts with an unrevealed barrier-free
 interface electron-transfer property that greatly boosts ORR catalytic activity
 and stability. 
 
-<!--more-->
-
 The PtFe-Fe2C Janus-like NPs showed much higher catalytic activity
 for ORR than either PtFe or Fe2C NPs in both acidic and alkaline electrolytes.
 Density functional theory simulations revealed that a barrier-free interface electron

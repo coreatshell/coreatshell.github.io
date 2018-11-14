@@ -17,8 +17,6 @@ visible photons is critical for applications in radiation
 exposure monitoring, security inspection, X-ray astronomy and
 medical radiography4,5. 
 
-<!--more-->
-
 However, conventional scintillators are
 generally synthesized by crystallization at a high temperature
 and their radioluminescence is difficult to tune across the visible

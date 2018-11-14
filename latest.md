@@ -3,6 +3,7 @@ layout: latest
 type: nav
 navtitle: Latest Research
 navorder: 4
+category: research
 title: Our Latest Research
 qotd: "We must reason in natural philosophy not from what we hope, or even expect, but from what we perceive."
 qotdauthor: HUMPHRY DAVY
