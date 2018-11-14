@@ -1,9 +1,10 @@
 ---
-layout: items
+layout: category_listT
 type: nav
 navtitle: Lab Members
 navorder: 3
-title: Lab Members
+title: staff_members
+sorting: priority
 Supervisors: 1
 PhdStudents: 1
 ResearchAssistants: 1
@@ -14,4 +15,3 @@ sitemap:
     lastmod: 2018-09-18
     changefreq: weekly
 ---
-

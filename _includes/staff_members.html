@@ -1,0 +1,42 @@
+{% assign counter = 1 %}
+{% assign banner_flag = 1 %}
+{% assign sorted_pages = site[page.title] | sort:page.sorting | reverse %}
+
+
+<article class="post">
+
+
+
+{% for item in sorted_pages %}
+
+
+
+
+
+
+
+<div class="box">
+    <section class="post featured" id="hero">
+        <article>
+
+
+
+            <p><p class="image left fit_small"><img src="{{ item.profile }}" class="profile"></p> <br>
+            <header>
+                <h2 class="hidden"><a name="{{ item.title }}">{{ item.title }}</a></h2>
+                <h3 class="hidden">{{ item.role }}</h3>
+
+            </header>
+            <a href="mailto:{{item.email}}"> <img class="icons" src="/assets/icon/icon-email.png" width="25px">  {{item.email}}</a> </p>
+
+
+
+        </article>
+
+    </section>
+    <p >{{ item.content }} </p>
+
+</div>
+
+{% endfor %}
+

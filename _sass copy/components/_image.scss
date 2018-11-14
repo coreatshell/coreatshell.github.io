@@ -30,7 +30,6 @@
 			float: left;
 			margin: 0 2rem 2rem 0;
 			top: 0.75rem;
-			clear: left;
 		}
 
 		&.right {
@@ -50,19 +49,6 @@
 
 			img {
 				width: 100%;
-			}
-		}
-		&.fit_small {
-			display: block;
-			margin: (_size(element-margin) * 1.0) 0;
-			width: 100%;
-
-			&:first-child {
-				margin-top: 0;
-			}
-
-			img {
-				width: 75%;
 			}
 		}
 

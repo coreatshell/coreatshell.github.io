@@ -10,12 +10,24 @@ layout: default
         <h2><a href="#">Welcome</a></h2>
         <p>{{ site.title}}</p>
     </header>
-    <article>
-        <p >{{ site.description }} </p>
-    </article>
-    <a href="#" class="image main"><img src="{{ "assets/images/group.jpg" | absolute_url }}" alt="" /></a>
 
-    <header><h1> Latest News </h1></header>
+    <figure>
+         <a href="#" class="image main"><img src="{{ "assets/images/group.jpg" | absolute_url }}" alt="" /></a>
+        <figcaption>
+            A recent picture of our research group.
+        </figcaption>
+    </figure>
+
+
+</article>
+
+<article>
+
+    {{content}}
+
+</article>
+<article>
+<header class="align-center"><h1> Latest News </h1></header>
 </article>
 
 <!--
@@ -37,9 +49,8 @@ layout: default
 <!-- Posts -->
 <section class="posts">
 
-    {% for post in site.posts limit:3 %}
-    {% assign mod3 = forloop.index | modulo: 3 %}
-    {% if post.featured  %}
+    {% for post in site.posts %}
+    {% if post.category == "news" %}
     <article>
         <header>
             <span class="date">{{ post.date | date_to_string }}</span>

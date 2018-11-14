@@ -16,7 +16,7 @@
 
 		> * {
 			@include padding((_size(padding) * 2), (_size(padding) * 2));
-			border-top: solid 0px _palette(border); /*controls all top borders */
+			border-top: solid 2px _palette(border);
 			margin: 0;
 
 			&:first-child {
@@ -84,53 +84,11 @@
 			width: 100%;
 			padding: 0;
 
-			&-photography {
-				@include flexgrid((
-								columns:			2,
-								gutters:			(_size(padding) * 4),
-								horizontal-align:	center,
-								vertical-align:		flex-start,
-								flush:				false
-				));
-				width: 100%;
-				padding: 0;
-
-
-			}
-
-            &-staff_members {
-				@include flexgrid((
-						columns:			1,
-						gutters:			(_size(padding) * 4),
-						horizontal-align:	center,
-						vertical-align:		flex-start,
-						flush:				false
-				));
-				width: 100%;
-				padding: 0;
-
-
-          }
-			&-latest_research {
-				@include flexgrid((
-								columns:			2,
-								gutters:			(_size(padding) * 4),
-								horizontal-align:	center,
-								vertical-align:		flex-start,
-								flush:				false
-				));
-				width: 100%;
-				padding: 0;
-
-
-			}
-
-
 			> article {
 				border-color: _palette(border);
-				border-right-width: 0px;
+				border-right-width: 2px;
 				border-style: solid;
-				border-top-width: 0px;
+				border-top-width: 2px;
 				text-align: center;
 
 				> :last-child {
@@ -164,19 +122,19 @@
 
 				> article {
 					&:nth-child(2n - 1) {
-						border-left-width: 0px;
+						border-left-width: 2px;
 					}
 
 					&:nth-child(-n + 2) {
-						border-top-width: 0px;
+						border-top-width: 2px;
 					}
 
 					&:nth-child(n) {
-						border-left-width: 0px;
+						border-left-width: 0;
 					}
 
 					&:nth-child(-n + 1) {
-						border-top-width: 0px;
+						border-top-width: 0;
 					}
 
 					.image {
@@ -214,19 +172,7 @@
 
 .member {
 	@include flexgrid((
-					columns: 2,
-					gutters: (_size(padding) * 4),
-					horizontal-align: center,
-					vertical-align: flex-start,
-					flush: false
-	));
-	width: 100%;
-	padding: 0;
-}
-
-.photography {
-	@include flexgrid((
-					columns: 2,
+					columns: 1,
 					gutters: (_size(padding) * 4),
 					horizontal-align: center,
 					vertical-align: flex-start,
