@@ -16,8 +16,10 @@
 {% if banner_flag ==1 %}
 </section>
 <section class="banner">
+    <header>
     <h2 class="parallax">{{page.qotd}}</h2>
     <div class="parallax_description">{{ page.qotdauthor }}</div>
+    </header>
 </section>
 <section class="posts">
     {% assign banner_flag = 0 %}
