@@ -19,15 +19,15 @@
     <section class="post featured" id="hero">
         <article>
 
-
-
-            <p><p class="image left fit_small"><img src="{{ item.profile }}" class="profile"></p> <br>
             <header>
                 <h2 class="hidden"><a name="{{ item.title }}">{{ item.title }}</a></h2>
                 <h3 class="hidden">{{ item.role }}</h3>
-
+                <a href="mailto:{{item.email}}"> <img class="icons" src="/assets/icon/icon-email.png" width="25px">  {{item.email}}</a>
             </header>
-            <a href="mailto:{{item.email}}"> <img class="icons" src="/assets/icon/icon-email.png" width="25px">  {{item.email}}</a> </p>
+
+            <p class="image left fit_small"><img src="{{ item.profile }}" class="profile"></p>  
+
+
 
 
 

@@ -101,7 +101,7 @@
             &-staff_members {
 				@include flexgrid((
 						columns:			1,
-						gutters:			(_size(padding) * 4),
+						gutters:			(_size(padding) * 1.5),
 						horizontal-align:	center,
 						vertical-align:		flex-start,
 						flush:				false
