@@ -19,7 +19,7 @@
 
 		&.left,
 		&.right {
-			max-width: 40%;
+			max-width: 30%;
 
 			img {
 				width: 100%;
@@ -69,7 +69,8 @@
 		&.main {
 			display: block;
 			margin: (_size(element-margin) * 2) 0;
-			width: 100%;
+			width: 50%;
+
 
 			&:first-child {
 				margin-top: 0;
