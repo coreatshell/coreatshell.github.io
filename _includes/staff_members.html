@@ -3,40 +3,167 @@
 {% assign sorted_pages = site[page.title] | sort:page.sorting | reverse %}
 
 
+
 <article class="post">
 
 
 
 {% for item in sorted_pages %}
 
+    {%if forloop.first %}
+    <div class="box">
+        <section class="post featured" id="hero">
+    <div class="mems">
 
+        <div class="item1">
+            <p class="image left fit"><img src="{{ item.profile }}" class="profile"></p>
+        </div>
 
-
-
-
-
-<div class="box">
-    <section class="post featured" id="hero">
-        <article>
-
+        <div class="item2">
+            <header style="text-align: center">
+            <h2 class="hidden" style="text-align: center"><a name="{{ item.title }}">{{ item.title }}</a></h2>
+            <h3 class="hidden">{{ item.role }}</h3>
+        </header>
             <header>
-                <h2 class="hidden"><a name="{{ item.title }}">{{ item.title }}</a></h2>
-                <h3 class="hidden">{{ item.role }}</h3>
                 <a href="mailto:{{item.email}}"> <img class="icons" src="/assets/icon/icon-email.png" width="25px">  {{item.email}}</a>
             </header>
+        </div>
 
-            <p class="image left fit_small"><img src="{{ item.profile }}" class="profile"></p>
+        <div class="item3">
+            <p >{{ item.content }} </p>
+        </div>
+    </div>
+            <!--
+
+                                <article>
+
+                                    <article style="display:inline-grid; justify-self: center; float:right; width:auto; ">
+                                        <div style="text-align: center">
+                                            <header style="text-align: center">
+                                                <h2 class="hidden" style="text-align: center"><a name="{{ item.title }}">{{ item.title }}</a></h2>
+                                                <h3 class="hidden">{{ item.role }}</h3>
+                                            </header>
+                                        </div>
+
+
+                                        </article>
+
+
+
+                                    <article style="display:inline-grid; float:left; align-content: center; width:250px; ">
+                                        <p class="image left fit"><img src="{{ item.profile }}" class="profi</p>
+                                    </article>
+
+
+
+
+                                    <article style="display:inline-grid; width:100%; ">     <p >{{ item.content }} </p>
+                                    </article>
+
+                                    <!--
+
+                                    <div style="display:block; width:100%; border-style: solid; border-width: 1px">test</div>
+                                    <div style="display:inline-flex; width:25%; border-style: solid; border-width: 1px">test</div>
+                                    <div style="display:inline-flex; width:74%; border-style: solid; border-width: 1px">test</div>
+
+                                    <header>
+                                        <h2 class="hidden"><a name="{{ item.title }}">{{ item.title }}</a></h2>
+                                        <h3 class="hidden">{{ item.role }}</h3>
+                                        <a href="mailto:{{item.email}}"> <img class="icons" src="/assets/icon/icon-email.png" width="25px">  {{item.email}}</a>
+                                    </header>
+
+                                    <p class="image left"><img src="{{ item.profile }}" class="profile"></p>
 
 
 
 
 
-        </article>
+                                </article>
 
-    </section>
-    <p >{{ item.content }} </p>
+                            </section>
+                            <p >{{ item.content }} </p>-->
 
-</div>
+            </div>
+</article>
+</section>
+
+
+<section class="posts" >
+    {%else%}
+
+
+
+        <section class="post featured" id="hero">
+            <div class="mems">
+
+                <div class="item1">
+                    <p class="image left fit"><img src="{{ item.profile }}" class="profile"></p>
+                </div>
+
+                <div class="item2">
+                    <header style="text-align: center">
+                        <h2 class="hidden" style="text-align: center"><a name="{{ item.title }}">{{ item.title }}</a></h2>
+                        <h3 class="hidden">{{ item.role }}</h3>
+                    </header>
+                    <header>
+                        <a href="mailto:{{item.email}}"> <img class="icons" src="/assets/icon/icon-email.png" width="25px">  {{item.email}}</a>
+                    </header>
+                </div>
+
+                <div class="item3">
+                    <p >{{ item.content }} </p>
+                </div>
+            </div>
+
+   <!-- <div >
+        <section class="post featured" id="hero">
+            <article>
+
+                <article style="display:inline-grid; text-align: center; float:right; width:49%; ">
+                    <div style="text-align: center">
+                    <header style="text-align: center">
+                        <h2 class="hidden" style="text-align: center"><a name="{{ item.title }}">{{ item.title }}</a></h2>
+                        <h3 class="hidden">{{ item.role }}</h3>
+                    </header>
+                    </div>
+
+                </article>
+
+                <article style="display:inline-grid; float:left; align-content: center; width:49%; ">
+                    <p class="image left"><img src="{{ item.profile }}" class="profile"></p>
+                </article>
+
+                <article style="display:inline-grid; float:right;width:49%; ">
+                    <header>
+                        <a href="mailto:{{item.email}}"> <img class="icons" src="/assets/icon/icon-email.png" width="25px">  {{item.email}}</a>
+                    </header>
+                </article>
+
+
+                <article style="display:inline-grid; width:100%; ">     <p >{{ item.content }} </p>
+                </article>
+
+
+
+
+
+
+
+
+
+
+            </article>   -->
+
+        </section>
+
+
+
+
+
+    {%endif%}
+
+
+
 
 {% endfor %}
 
