@@ -1,4 +1,5 @@
 ---
+published: false
 layout: member
 title: a Research Assistant
 role: Research Assistant

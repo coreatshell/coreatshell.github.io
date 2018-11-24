@@ -1,22 +1,18 @@
 ---
+published: false
 layout: member
-title: a Research Associate
+title: person name
+first_name: foo
+middle_name: foo
+surname: foo
+salutation: Mr/Ms
 role: Research Associate
 priority: 3
-description: >-
-            Donec eget ex magna. Interdum et malesuada fames 
-            ac ante ipsum primis in faucibus. Pellentesque venenatis 
-            dolor imperdiet dolor mattis sagittis. Praesent rutrum 
-            sem diam, vitae egestas enim auctor sit amet. Pellentesque 
-            leo mauris, consectetur id ipsum sit amet, fergiat. 
-            Pellentesque in mi eu massa lacinia malesuada et a elit. 
-            Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. 
-            Curabitur sapien risus, commodo eget turpis at, elementum convallis 
-            elit. Pellentesque enim turpis, hendrerit.
+description: Profile Page for Somebody
 sitemap:
     priority: 3
     lastmod: 2018-09-18
     changefreq: weekly
-profile: assets/images/profiles/profile_placeholder.png
-email: a.person@connect.polyu.hk
+profile: assets/images/profiles/someone_profile.png
+email: someone@connect.polyu.hk
 ---
