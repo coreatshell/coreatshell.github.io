@@ -101,7 +101,7 @@
             &-staff_members {
 				@include flexgrid((
 						columns:			1,
-						gutters:			(_size(padding) * 4),
+						gutters:			(_size(padding) * 1.5),
 						horizontal-align:	center,
 						vertical-align:		flex-start,
 						flush:				false
@@ -234,4 +234,27 @@
 	));
 	width: 100%;
 	padding: 0;
+}
+
+
+.mems {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+	grid-auto-rows: auto;
+	grid-template-areas:
+					"a b b"
+					"d d d";
+}
+
+.item1 {
+	grid-area: a;
+}
+.item2 {
+	grid-area: b;
+	justify-self: center;
+}
+.item3 {
+	grid-area: d;
+	justify-self: center;
 }
