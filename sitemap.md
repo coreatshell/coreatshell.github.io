@@ -1,28 +1,15 @@
 ---
-layout: default
-template: simple
-published: false
+Layout: null
+published: true
 type: nav
-navtitle: Contact Us
+navtitle: sitemap
 navorder: 6
-category: research
-title: Contact Us
-qotd: "We must reason in natural philosophy not from what we hope, or even expect, but from what we perceive."
-qotdauthor: HUMPHRY DAVY
-description: This will show our most research Research Items
-sitemap:
-    priority: 1.0
-    lastmod: 2017-11-02
-    changefreq: weekly
 ---
 
-# Contact information
-
-this is how to contact us
 
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for post in site.posts %}
+  {% for post in site.pages %}
     <url>
       <loc>{{ site.url }}{{ post.url }}</loc>
       {% if post.lastmod == null %}

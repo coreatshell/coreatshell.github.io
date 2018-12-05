@@ -1,9 +1,10 @@
 ---
 layout: category_listT
+template: staff_members
 type: nav
 navtitle: Lab Members
 navorder: 3
-title: staff_members
+title: GroupMembers
 sorting: priority
 Supervisors: 1
 PhdStudents: 1
