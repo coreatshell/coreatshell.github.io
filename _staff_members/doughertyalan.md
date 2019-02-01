@@ -16,6 +16,6 @@ profile: assets/images/profiles/doughertyalan_profile.png
 email: alan.dougherty@connect.polyu.hk
 ---
 
-Alan Dougherty received the MEng degree in electronic engineering from King’s College London, London, U.K., in 2013, and 
-is currently working toward the Ph.D. degree in computing at Hong Kong Polytechnic University, Hong Kong, China.
+Alan William Dougherty was born in London, U.K. and received the MEng degree in electronic engineering from King’s College London, U.K., in 2013. 
+His previous experience includes working on robotics and machine vision, specifically tactile sensing and vision-based object recognition. He is currently working towards the Ph.D. degree in Computing at the Hong Kong Polytechnic University, Hong Kong, China.
 His research interests include computer vision, health informatics, computational modelling and machine learning.
