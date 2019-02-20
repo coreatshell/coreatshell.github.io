@@ -1,7 +1,7 @@
 ---
 layout: default
 template: simple
-published: true
+published: false
 type: nav
 navtitle: Publications
 navorder: 5
