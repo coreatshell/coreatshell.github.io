@@ -1,10 +1,10 @@
 ---
 layout: member
-title: Mr Alan William Dougherty
+title: Dr Alan William Dougherty
 first_name: Alan
 middle_name: William
 surname: Dougherty
-salutation: Mr
+salutation: Dr
 role: Research Associate
 priority: 3
 description: Profile Page for Alan William Dougherty
@@ -16,6 +16,5 @@ profile: assets/images/profiles/doughertyalan_profile.png
 email: alan.dougherty@connect.polyu.hk
 ---
 
-Alan William Dougherty was born in London, U.K. and received the MEng degree in electronic engineering from King’s College London, U.K., in 2013. 
-His previous experience includes working on robotics and machine vision, specifically tactile sensing and vision-based object recognition. He is currently working towards the Ph.D. degree in Computing at the Hong Kong Polytechnic University, Hong Kong, China.
+Alan William Dougherty was born in London, U.K. and received the Ph.D degree in Pattern recognition and Machine intelligence from the Hong Kong Polytechnic University in 2019 and the MEng degree in electronic engineering from King’s College London, U.K., in 2013. 
 His research interests include computer vision, health informatics, computational modelling and machine learning.
