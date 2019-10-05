@@ -16,5 +16,5 @@ profile: assets/images/profiles/doughertyalan_profile.png
 email: alan.dougherty@connect.polyu.hk
 ---
 
-Alan William Dougherty was born in London, U.K. and received the Ph.D degree in Pattern recognition and Machine intelligence from the Hong Kong Polytechnic University in 2019 and the MEng degree in electronic engineering from King’s College London, U.K., in 2013. 
-His research interests include computer vision, health informatics, computational modelling and machine learning.
+Alan William Dougherty was born in London, U.K. and received the Ph.D degree in Pattern recognition and Machine intelligence from the Hong Kong Polytechnic University, in 2019 and the MEng degree in electronic engineering from King’s College London, U.K., in 2013. 
+His research interests include computer vision, health informatics, computational modelling and machine learning. 
